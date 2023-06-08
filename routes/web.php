@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('business_hours',[\App\Http\Controllers\BusinessHourController::class, 'index']);
+Route::post('business_hours',[\App\Http\Controllers\BusinessHourController::class, 'update'])->name('business_hours.update');
